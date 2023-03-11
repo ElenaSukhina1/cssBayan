@@ -17,7 +17,8 @@ body{
 .container{
   margin: 0 auto;
   max-width: 80em;
-  background-color: darkseagreen;
+  background-color: rgb(203, 229, 203);
+  padding-bottom: 3em;
 }
 
 .accordion{
@@ -46,31 +47,41 @@ h1{
 .accordion-img{
   margin: 0 auto;
   /* max-width: 50%; */
+  margin-top: 1em;
   margin-bottom: 1em;
   width: 0;
   transition: 0.5s;
   
+  
 }
 
-/* .first-img{
-  display: block;
-} */
+
 
 .title{
   display: flex;
+  flex-wrap: wrap;
+
   justify-content: space-between;
   font-family: 'Inika';
   font-weight: regular;
   font-size: 2em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  color: rgb(6, 97, 76);
+  color: rgb(11, 133, 104);
   cursor: pointer;
 }
+
+.text{
+  margin: 0;
+  /* margin-bottom: 1em; */
+  width: 90%;
+}
+
 
 .simbol{
   margin: 0;
   display: none;
+
 }
 
 .simbol2{
@@ -85,23 +96,38 @@ input{
   appearance: none;
 }
 
-/* .accordion-tab:last-child{
-  display: block;
-} */
 
-input:checked + .accordion-img{
+
+/* input:checked + .accordion-img{
   width: 50%;
   transition: 0.5s;
 
-}
+} */
+
+
 
 
 
 .accordion-tab:hover > .accordion-img{
+  
   width: 50%;
   transition: 0.5s;
+  flex-basis: 50%;
+  
 }
 
+.accordion-tab:hover > .title > .accordion-img{
+  
+  width: 50%;
+  transition: 0.5s;
+ 
+}
+input[type=radio]:checked + .title > .accordion-img{
+  
+  width: 50%;
+  transition: 0.5s;
+
+}
 
 
 
@@ -112,4 +138,20 @@ input:checked + .accordion-img{
 
 .accordion:hover > .accordion-tab > .title > .simbol{
   display: block;
+  width: 10%;
+  transition: 0.5s;
+}
+
+svg{
+  display: none;
+}
+input[type=radio]:checked:hover + .title > .simbol2{
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+}
+input[type=radio]:checked:hover + .title > .simbol{
+  width: 10%;
+  display: none;
+  transition: 0.5s;
 }
