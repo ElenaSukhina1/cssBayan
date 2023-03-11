@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'Inika';
+  src: url(assets/fonts/Inika-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Inika';
+  src: url(assets/fonts/Inika-Regular.ttf);
+  font-weight: regular;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 80em;
+  background-color: darkseagreen;
+}
+
+.accordion{
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+h1{
+  font-family: 'Inika';
+  font-weight: bold;
+  font-size: 4em;
+  margin: 0;
+  padding: 0.5em 0em;
+  border-bottom: 0.05em solid rgba(1, 41, 18, 0.358);
+  
+}
+
+.accordion-tab{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.2em solid rgba(1, 41, 18, 0.358);
+  cursor: pointer;
+
+}
+
+.accordion-img{
+  margin: 0 auto;
+  max-width: 50%;
+  margin-bottom: 1em;
+  display: none;
+}
+
+/* .first-img{
+  display: block;
+} */
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inika';
+  font-weight: regular;
+  font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.simbol{
+  margin: 0;
+  display: none;
+}
+
+.simbol2{
+  margin: 0;
+
+}
+
+input{
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+/* .accordion-tab:last-child{
+  display: block;
+} */
+
+input:checked + .accordion-img{
+  display: block;
+
+}
+
+.accordion-tab:hover > .accordion-img{
+  display: block;
+}
+
+.accordion:hover{
+  color: rgb(0, 0, 0);
+}
