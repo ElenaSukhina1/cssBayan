@@ -45,9 +45,11 @@ h1{
 
 .accordion-img{
   margin: 0 auto;
-  max-width: 50%;
+  /* max-width: 50%; */
   margin-bottom: 1em;
-  display: none;
+  width: 0;
+  transition: 0.5s;
+  
 }
 
 /* .first-img{
@@ -62,6 +64,7 @@ h1{
   font-size: 2em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  color: rgb(6, 97, 76);
   cursor: pointer;
 }
 
@@ -72,6 +75,7 @@ h1{
 
 .simbol2{
   margin: 0;
+  display: none;
 
 }
 
@@ -86,14 +90,26 @@ input{
 } */
 
 input:checked + .accordion-img{
-  display: block;
+  width: 50%;
+  transition: 0.5s;
 
 }
+
+
 
 .accordion-tab:hover > .accordion-img{
-  display: block;
+  width: 50%;
+  transition: 0.5s;
 }
 
-.accordion:hover{
+
+
+
+
+.accordion:hover > .accordion-tab > .title{
   color: rgb(0, 0, 0);
+}
+
+.accordion:hover > .accordion-tab > .title > .simbol{
+  display: block;
 }
