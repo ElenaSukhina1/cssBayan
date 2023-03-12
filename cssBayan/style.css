@@ -33,12 +33,12 @@ h1{
   margin: 0;
   padding: 0.5em 0em;
   border-bottom: 0.05em solid rgba(1, 41, 18, 0.358);
-  
+  box-sizing: border-box;
 }
 
 .accordion-tab{
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   border-bottom: 0.2em solid rgba(1, 41, 18, 0.358);
   cursor: pointer;
 
@@ -71,6 +71,12 @@ h1{
   cursor: pointer;
 }
 
+.title-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .text{
   margin: 0;
   /* margin-bottom: 1em; */
@@ -96,62 +102,49 @@ input{
   appearance: none;
 }
 
-
-
-/* input:checked + .accordion-img{
+.meme:checked + .title > .accordion-img {
   width: 50%;
   transition: 0.5s;
-
-} */
-
-
-
-
-
-.accordion-tab:hover > .accordion-img{
-  
-  width: 50%;
-  transition: 0.5s;
-  flex-basis: 50%;
-  
 }
 
-.accordion-tab:hover > .title > .accordion-img{
-  
-  width: 50%;
-  transition: 0.5s;
- 
-}
-input[type=radio]:checked + .title > .accordion-img{
-  
-  width: 50%;
-  transition: 0.5s;
-
-}
-
-
-
-
-.accordion:hover > .accordion-tab > .title{
-  color: rgb(0, 0, 0);
-}
-
-.accordion:hover > .accordion-tab > .title > .simbol{
-  display: block;
-  width: 10%;
-  transition: 0.5s;
-}
-
-svg{
-  display: none;
-}
-input[type=radio]:checked:hover + .title > .simbol2{
+.meme:checked:hover + .title > .title-container > .simbol2 {
   width: 10%;
   display: block;
   transition: 0.5s;
 }
-input[type=radio]:checked:hover + .title > .simbol{
-  width: 10%;
-  display: none;
+
+.accordion-tab:hover > .title > .accordion-img {
+  width: 50%;
   transition: 0.5s;
 }
+
+.accordion-tab:hover > .title > .title-container > .simbol2 {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+}
+
+.accordion:hover > .accordion-tab > .title > .title-container > .simbol {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+}
+
+.accordion:hover > .accordion-tab > .meme:checked + .title > .title-container > .simbol {
+  display: none;
+}
+
+.accordion:hover > .accordion-tab > .meme:checked + .title > .title-container > .simbol2 {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+}
+
+.meme:checked + .title > .title-container > .simbol {
+  display: none;
+}
+
+.accordion > .accordion-tab:hover > .title > .title-container > .simbol {
+  display: none;
+}
+
