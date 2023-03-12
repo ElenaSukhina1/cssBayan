@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'Inika';
+  src: url(assets/fonts/Inika-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Inika';
+  src: url(assets/fonts/Inika-Regular.ttf);
+  font-weight: regular;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80em;
+  background-color: rgb(203, 229, 203);
+  padding-bottom: 3em;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+}
+
+.accordion {
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+h1 {
+  font-family: 'Inika';
+  font-weight: bold;
+  font-size: 2.7em;
+  margin: 0;
+  padding: 0.5em 0em;
+  border-bottom: 0.04em solid rgba(1, 41, 18, 0.358);
+  box-sizing: border-box;
+}
+
+.accordion-tab {
+  border-bottom: 0.1em solid rgba(1, 41, 18, 0.358);
+  cursor: pointer;
+
+}
+
+.accordion-img {
+  margin: 0 auto;
+  width: 0;
+  transition: 0.5s;
+
+
+}
+
+
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: 'Inika';
+  font-weight: regular;
+  font-size: 1.7em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: rgb(11, 133, 104);
+  cursor: pointer;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+
+.text {
+  margin: 0;
+  width: 90%;
+}
+
+
+.simbol {
+  margin: 0;
+  font-size: 0.9em;
+  display: none;
+
+}
+
+.simbol2 {
+  margin: 0;
+  font-size: 0.9em;
+  display: none;
+
+}
+
+input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.accordion:hover>.accordion-tab>.title>.title-container>.text {
+  color: rgb(3, 38, 104);
+}
+
+.meme:checked+.title>.accordion-img {
+  width: 50%;
+  transition: 0.5s;
+}
+
+.meme:checked:hover+.title>.title-container>.simbol2 {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+  color: rgb(3, 38, 104);
+}
+
+.accordion-tab:hover>.title>.accordion-img {
+  width: 50%;
+  transition: 0.5s;
+}
+
+.accordion-tab:hover>.title>.title-container>.simbol2 {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+  color: rgb(3, 38, 104);
+}
+
+.accordion:hover>.accordion-tab>.title>.title-container>.simbol {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+  color: rgb(3, 38, 104);
+}
+
+.accordion:hover>.accordion-tab>.meme:checked+.title>.title-container>.simbol {
+  display: none;
+}
+
+.accordion:hover>.accordion-tab>.meme:checked+.title>.title-container>.simbol2 {
+  width: 10%;
+  display: block;
+  transition: 0.5s;
+  color: rgb(3, 38, 104);
+}
+
+.meme:checked+.title>.title-container>.simbol {
+  display: none;
+}
+
+.accordion>.accordion-tab:hover>.title>.title-container>.simbol {
+  display: none;
+}
+
+@media(max-width: 820px){
+  h1{
+    font-size: 3em;
+  }
+  .title{
+    font-size: 2em;
+  }
+}
+
+@media(max-width: 320px){
+  h1{
+    font-size: 1.5em;
+  }
+  .title{
+    font-size: 1em;
+  }
+}
+
